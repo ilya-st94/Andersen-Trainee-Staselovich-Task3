@@ -1,0 +1,22 @@
+public class ElementsMultiplesOfThree {
+	private static int array[];
+
+	public static void main(String[] args) {
+		try {
+			array = new int[10];
+			for (int i = 0; i < array.length; i++) {
+				array[i] = (int) (Math.random() * (10 - 1) + 1);
+				System.out.print(array[i] + " ");
+			}
+			System.out.println(" исходный массив ");
+			for (int i = 0; i < array.length; i++) {
+				if ((array[i] % 3) == 0) {
+					System.out.print(array[i] + " ");
+				}
+			}
+			System.out.println(" элементы, кратные 3");
+		} catch (Exception error) {
+			System.out.println(error);
+		}
+	}
+}
